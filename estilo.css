@@ -1,0 +1,345 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*body {
+	height: 100%;
+	font-family: "Mulish", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #f7f7f7;
+}*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Mulish", sans-serif;
+	color: #666;
+	background: black; 
+	font-size: 1em;
+	line-height: 1.5em;
+	padding-top: 80px;
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+h2{
+	line-height: 1.3em;
+	margin: 15px 0;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.portada {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #0b76a6;
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+	
+
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+				color: white;
+			}
+			
+				nav ul li a:hover {
+					background: #0b76a6;
+				}
+
+
+/* MAIN */
+#main-content {
+	background: white;
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+				
+#main-content header,#main-content .content {
+	padding: 40px;
+}
+
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+	#main-footer p {
+		margin: 0;
+	}
+	
+	#main-footer a {
+		color: white;
+	}
+
+#main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: absolute; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+/* SLIDER */ 
+
+.container-slider{
+	max-width: 100%;
+	margin: auto;
+	overflow: hidden;
+	box-shadow: 0 0 0 2px black,
+				0 15px 50px;
+	position: relative;
+}
+
+.slider{
+	display: flex;
+	width: 500%; /*Cantidad de imagenes*/
+	height: 600px;
+	margin-left: -100%;
+}
+
+.slider_section{
+	width: 100%;
+}
+
+.slider_img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider_btn{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background:  rgba(255, 255, 255, 0.7);
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	font-weight: bold;
+	font-family: monospace;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider_btn:hover{
+	background: white;
+}
+
+.slider_btn-left{
+	left: 10px;
+}
+
+.slider_btn-right{
+	right: 10px;
+}
+
+/* GALERIA */
+.galeria{
+	width: 90%;
+	margin: auto;
+	list-style: none;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.galeria li{
+	margin: 5px;
+}
+
+.galeria img{
+	max-width: 500px;
+	height: 300px;
+	border-style: solid;
+	border-color: rgb(145, 3, 3);
+	border-radius: 30px;
+	border-width: 1px;
+}
+
+.modal{
+	display: none;
+}
+
+.modal:target{
+	display: block;
+	transition: all 0.5s;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal h3{
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.imagen{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imagen a{
+	color: white;
+	font-size: 40px;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.imagen a:nth-child(2){
+	margin: 0;
+	height: 100%;
+	flex-shrink: 2;
+}
+
+.imagen img{
+	width: 450px;
+	height: 100%;
+	max-width: 100%;
+	border: 7px solid white;
+	box-sizing: border-box;
+}
+
+.cerrar{
+	display: block;
+	background: white;
+	width: 25px;
+	height: 25px;
+	margin: auto;
+	text-align: center;
+	text-decoration: none;
+	font-size: 25px;
+	color: #000;
+	padding: 5px;
+	border-radius: 50%;
+	line-height: 25px;
+}
+
+/* FORMULARIO */
+
+.contact {
+	margin-block-end: 5em;
+}
+
+#trucazo {
+	opacity: 0;
+}
+
+.u-wrapper {
+	max-inline-size: 1232px;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+.contact {
+	margin-block-end: 5em;
+}
+
+.form {
+	max-inline-size: 550px;
+	margin: auto;
+}
+  
+.form label {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: .5em;
+	padding-inline-start: .5em;
+}
+  
+.form label span {
+	color: #DA1414;
+}
+  
+.form input, .form textarea {
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 1rem;
+	padding: .8em;
+	border-radius: .5em;
+	border: 1px solid #858C94;
+}
+
+.form textarea {
+	margin-block-end: 2em;
+	font-family: inherit;
+}
+
+.form .tag span {
+    display: block;
+    text-align: center;
+}

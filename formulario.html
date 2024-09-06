@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+        <link href="estilo.css" rel="stylesheet">
+        <link rel="shortcut icon" href="icono.png">
+
+        <title>Contacto | Leo Funes Magia</title>
+    </head>
+
+    <body>
+        <header id="main-header">
+		
+            <a id="logo-header">
+                <span class="site-name">Magia y Humor</span>
+                <span class="site-desc">Eventos privados / Recepciones / Infantiles</span>
+            </a> <!-- / #logo-header -->
+    
+            <nav>
+                <ul>
+                    <li><a href="https://leofunesmagia.000webhostapp.com" target="_blank">Inicio</a></li>
+                    <li><a href="file:///D:/Mauri/Universidad/Ahora/ULP/2do%20Cuatrimentre/Programacion%20Web/Trabajo%20final/galeria.html" target="_blank">Galería</a></li>
+                    <li><a href="file:///D:/Mauri/Universidad/Ahora/ULP/2do%20Cuatrimentre/Programacion%20Web/Trabajo%20final/formulario.html" target="_blank">Contacto</a></li>
+                </ul>
+            </nav><!-- / nav -->
+    
+        </header><!-- / #main-header -->
+
+        <!-- / Formulario -->
+        <section class="contact">
+            <div class="u-wrapper">
+              <div class="contact-content">
+                <form id="form" action="" class="form">
+                  <h3 class="tag"><span>CONTACTO</span></h3>
+                  <label for="name">Nombre Completo <span>*</span></label>
+                  <input name="name" required type="text" id="name" placeholder="Juan">
+                  <label for="email">Correo electrónico <span>*</span></label>
+                  <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+                  <label for="message">Mensaje</label>
+                  <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+                  <button type="submit" class="btn primary full">enviar mensaje</button>
+                </form>
+                <a href="mailto:cheleofunes@gmail.com" id="trucazo"></a>
+              </div>
+            </div>
+          </section>
+
+          <script>
+            const $form = document.querySelector('#form')
+            const $buttonMailto = document.querySelector('#trucazo')
+        
+            $form.addEventListener('submit', handleSubmit)
+        
+            function handleSubmit(event) {
+              event.preventDefault()
+              const form = new FormData(this)
+              $buttonMailto.setAttribute('href', `mailto:cheleofunes@leonidasesteban.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+              $buttonMailto.click()
+            }
+          </script>
+
+        <footer id="main-footer">
+            <p><a href="...">Privacy Policy - Terms & Conditions - Contact Us - Report a bug/vulnerability</a></p>
+            <br>
+            <p>Redes: <a href="https://www.instagram.com/leofunesmagia/" style="color: brown;" target="_blank">Instagram</a> - 
+                <a href="https://www.facebook.com/Leo-Funes-Magia-1916816925081175" style="color: rgb(6, 6, 180);" target="_blank">Facebook</a>
+            </p>
+            <br>
+            <p><a href="#">⬆ IR ARRIBA ⬆</a></p>
+        </footer> <!-- / #main-footer -->
+    </body>
+</html>
